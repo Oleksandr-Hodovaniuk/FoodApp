@@ -1,7 +1,7 @@
 ﻿namespace Catalog.Application.Interfaces;
 
-public interface IApplicationDbContextInitialiser
+public interface IApplicationDbContextInitializer
 {
-    Task InitialiseAsync(CancellationToken ct = default);
+    Task InitializeAsync(CancellationToken ct = default);
     Task SeedAsync(CancellationToken ct = default);
 }

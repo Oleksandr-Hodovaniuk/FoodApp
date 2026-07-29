@@ -16,7 +16,7 @@ builder.Services.AddApiServices()
 
 var app = builder.Build();
 
-await app.InitialiseDatabaseAsync();
+await app.InitializeDatabaseAsync();
 
 // Configure the HTTP request pipeline.
 

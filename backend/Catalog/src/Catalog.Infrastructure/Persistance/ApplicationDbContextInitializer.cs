@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Catalog.Infrastructure.Persistance;
 
-internal class ApplicationDbContextInitialiser(ApplicationDbContext _context) : IApplicationDbContextInitialiser
+internal class ApplicationDbContextInitializer(ApplicationDbContext _context) : IApplicationDbContextInitializer
 {
-    public async Task InitialiseAsync(CancellationToken ct = default)
+    public async Task InitializeAsync(CancellationToken ct = default)
     {
         if (_context.Database.IsNpgsql())
         {

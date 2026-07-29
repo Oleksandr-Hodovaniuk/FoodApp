@@ -15,7 +15,7 @@ public static class ConfigureServics
         services.AddDbContext<ApplicationDbContext>(options =>
             options.UseNpgsql(connectionString));
 
-        services.AddScoped<IApplicationDbContextInitialiser, ApplicationDbContextInitialiser>();
+        services.AddScoped<IApplicationDbContextInitializer, ApplicationDbContextInitializer>();
 
         return services;
     }

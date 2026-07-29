@@ -27,12 +27,12 @@ public static class ConfigureServices
         return app;
     }
 
-    public static async Task InitialiseDatabaseAsync(this WebApplication app)
+    public static async Task InitializeDatabaseAsync(this WebApplication app)
     {
         using var scope = app.Services.CreateScope();
-        var dbInitialiser = scope.ServiceProvider.GetRequiredService<IApplicationDbContextInitialiser>();
+        var dbInitialiser = scope.ServiceProvider.GetRequiredService<IApplicationDbContextInitializer>();
 
-        await dbInitialiser.InitialiseAsync();
+        await dbInitialiser.InitializeAsync();
         await dbInitialiser.SeedAsync();
     }
 }
