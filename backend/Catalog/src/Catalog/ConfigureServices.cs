@@ -1,4 +1,5 @@
-﻿using Scalar.AspNetCore;
+﻿using Catalog.Application.Interfaces;
+using Scalar.AspNetCore;
 
 namespace Catalog;
 
@@ -24,5 +25,14 @@ public static class ConfigureServices
         }
 
         return app;
+    }
+
+    public static async Task InitialiseDatabaseAsync(this WebApplication app)
+    {
+        using var scope = app.Services.CreateScope();
+        var dbInitialiser = scope.ServiceProvider.GetRequiredService<IApplicationDbContextInitialiser>();
+
+        await dbInitialiser.InitialiseAsync();
+        await dbInitialiser.SeedAsync();
     }
 }
