@@ -17,6 +17,8 @@ public static class ConfigureServics
 
         services.AddScoped<IApplicationDbContextInitializer, ApplicationDbContextInitializer>();
 
+        services.AddScoped<IApplicationDbContext, ApplicationDbContext>();
+
         return services;
     }
 }

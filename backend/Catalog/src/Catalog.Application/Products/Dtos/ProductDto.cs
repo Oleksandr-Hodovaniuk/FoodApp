@@ -1,7 +1,6 @@
-﻿using Catalog.Application.Dtos.Category;
-using Catalog.Domain.Entities;
+﻿using Catalog.Application.Categories.Dtos;
 
-namespace Catalog.Application.Dtos.Product;
+namespace Catalog.Application.Products.Dtos;
 
 public class ProductDto
 {

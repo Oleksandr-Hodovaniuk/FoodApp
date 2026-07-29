@@ -1,6 +1,5 @@
-﻿using Catalog.Domain.Entities;
-
-namespace Catalog.Application.Dtos.Product;
+﻿
+namespace Catalog.Application.Products.Dtos;
 
 public class UpdateProductDto
 {

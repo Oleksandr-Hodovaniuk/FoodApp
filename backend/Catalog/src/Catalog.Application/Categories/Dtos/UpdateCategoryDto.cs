@@ -1,4 +1,4 @@
-﻿namespace Catalog.Application.Dtos.Category;
+﻿namespace Catalog.Application.Categories.Dtos;
 
 public class UpdateCategoryDto
 {

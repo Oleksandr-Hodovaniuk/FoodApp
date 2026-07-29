@@ -1,10 +1,11 @@
-﻿using Catalog.Domain.Entities;
+﻿using Catalog.Application.Interfaces;
+using Catalog.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Catalog.Infrastructure.Persistance;
 
 internal class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-    : DbContext(options)
+    : DbContext(options), IApplicationDbContext
 {
     public DbSet<Product> Products => Set<Product>();
     public DbSet<Category> Categories => Set<Category>();
